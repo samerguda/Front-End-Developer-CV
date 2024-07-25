@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Developer CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+</style>
+<body>
+    <div class="container">
+        <button onclick="printCV()">Print CV</button>
+        <div class="section" id="personal-info">
+            <h1>Samer Alsaadni</h1>
+            <p>Abha Saudi Arabia </p>
+            <p>Darb</p>
+            <p>+966548247897</p>
+            <p>samerguda@gmail.com</p>
+            <p>[LinkedIn Profile]</p>
+            <p>[GitHub Profile]</p>
+            <p>[Portfolio Website]</p>
+            <button onclick="copyContent('personal-info')">Copy Personal Info</button>
+        </div>
+        
+        <div class="section" id="summary">
+            <h2>Professional Summary</h2>
+            <p>Dedicated and highly skilled Front-End Developer with 7 years of experience...</p>
+            <button onclick="copyContent('summary')">Copy Summary</button>
+        </div>
+
+        <div class="section" id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> HTML, CSS, JavaScript, TypeScript</li>
+                <li><strong>Frameworks/Libraries:</strong> React, Angular, Vue.js, Bootstrap</li>
+                <li><strong>Tools:</strong> Git, Webpack, npm, Sass, Adobe XD, Figma</li>
+                <li><strong>Other:</strong> Responsive Design, Cross-Browser Compatibility, SEO Best Practices, Web Accessibility (WCAG)</li>
+            </ul>
+            <button onclick="copyContent('skills')">Copy Skills</button>
+        </div>
+
+        <div class="section" id="experience">
+            <h2>Professional Experience</h2>
+            <h3>Front-End Developer</h3>
+            <p>Freelance / Remote | June 2017 – Present</p>
+            <ul>
+                <li>Developed and maintained responsive websites...</li>
+                <li>Collaborated with back-end developers...</li>
+                <li>Conducted code reviews and provided mentorship...</li>
+                <li>Utilized React and Angular to build dynamic...</li>
+            </ul>
+            <h3>Front-End Developer & Instructor</h3>
+            <p>XYZ Coding Bootcamp, City, State | March 2021 – Present</p>
+            <ul>
+                <li>Designed and delivered curriculum...</li>
+                <li>Guided students through hands-on projects...</li>
+                <li>Developed an innovative system...</li>
+                <li>Provided personalized feedback...</li>
+            </ul>
+            <h3>Front-End Developer</h3>
+            <p>ABC Tech Solutions, City, State | January 2017 – May 2021</p>
+            <ul>
+                <li>Created visually appealing and user-friendly websites...</li>
+                <li>Implemented responsive design techniques...</li>
+                <li>Collaborated with UX/UI designers...</li>
+                <li>Enhanced website performance...</li>
+            </ul>
+            <button onclick="copyContent('experience')">Copy Experience</button>
+        </div>
+
+        <div class="section" id="education">
+            <h2>Education</h2>
+            <p>Bachelor of Science in Computer Science</p>
+            <p>University Name, City, State | Graduated: May 2016</p>
+            <button onclick="copyContent('education')">Copy Education</button>
+        </div>
+
+        <div class="section" id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Meta Certified Front-End Developer</li>
+                <li>IBM Certified Front-End Developer</li>
+                <li>Google Certified Front-End Developer</li>
+            </ul>
+            <button onclick="copyContent('certifications')">Copy Certifications</button>
+        </div>
+
+        <div class="section" id="projects">
+            <h2>Projects</h2>
+            <p><strong>Project Name</strong> – [Link to Project]</p>
+            <p>Brief description of the project...</p>
+            <p><strong>Project Name</strong> – [Link to Project]</p>
+            <p>Brief description of the project...</p>
+            <button onclick="copyContent('projects')">Copy Projects</button>
+        </div>
+
+        <div class="section" id="professional-development">
+            <h2>Professional Development</h2>
+            <ul>
+                <li>Advanced JavaScript – [Online Course Provider]</li>
+                <li>Responsive Web Design – [Online Course Provider]</li>
+            </ul>
+            <button onclick="copyContent('professional-development')">Copy Professional Development</button>
+        </div>
+
+        <div class="section" id="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>English: Fluent</li>
+                <li>Spanish: Intermediate</li>
+                <li>Arabic: Basic</li>
+            </ul>
+            <button onclick="copyContent('languages')">Copy Languages</button>
+        </div>
+
+        <div class="section" id="references">
+            <h2>References</h2>
+            <p>Available upon request.</p>
+            <button onclick="copyContent('references')">Copy References</button>
+        </div>
+    </div>
+
+    <script>
+        function copyContent(id) {
+    const content = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(content).then(() => {
+        alert('Content copied to clipboard');
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+
+function printCV() {
+    window.print();
+}
+
+    </script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
